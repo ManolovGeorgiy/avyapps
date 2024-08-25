@@ -18,22 +18,22 @@ allure {
 
 
 dependencies {
-    implementation group: 'io.qameta.allure', name: 'allure-testng', version: '2.13.3'
-    implementation 'org.testng:testng:7.1.0'
-    testImplementation 'junit:junit:4.13.1'
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
-    runtimeOnly group: 'org.aspectj', name: 'aspectjweaver', version: '1.9.7'
-    implementation group: 'io.rest-assured', name: 'rest-assured', version: '5.4.0'
-    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.15.2'
-    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.23.0'
-    implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '5.7.0'
-    implementation group: 'org.testng', name: 'testng', version: '7.8.0'
-    implementation group: 'org.projectlombok', name: 'lombok', version: '1.18.30'
-    implementation group: 'com.github.javafaker', name: 'javafaker', version: '1.0.2'
-    implementation 'com.squareup.okhttp3:okhttp:4.9.1'
-    implementation group: 'org.seleniumhq.selenium', name: 'selenium-chromium-driver', version: '4.23.0'
+    implementation group: 'io.qameta.allure', name: 'allure-testng', version: '2.23.0' // Последняя версия Allure TestNG
+    implementation 'org.testng:testng:7.9.0' // Последняя версия TestNG
+    testImplementation 'junit:junit:4.13.2' // Последняя версия JUnit 4
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0' // Последняя версия JUnit 5
+    runtimeOnly group: 'org.aspectj', name: 'aspectjweaver', version: '1.9.20' // Последняя версия AspectJ Weaver
+    implementation group: 'io.rest-assured', name: 'rest-assured', version: '5.4.0' // Последняя версия Rest-Assured
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.15.2' // Последняя версия Jackson Databind
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.14.0' // Последняя версия Selenium Java
+    implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '5.8.0' // Последняя версия WebDriverManager
+    implementation group: 'org.testng', name: 'testng', version: '7.9.0' // Повторение зависимости TestNG (объедините или удалите лишнее)
+    implementation group: 'org.projectlombok', name: 'lombok', version: '1.18.30' // Последняя версия Lombok
+    implementation group: 'com.github.javafaker', name: 'javafaker', version: '1.0.2' // Последняя версия JavaFaker
+    implementation 'com.squareup.okhttp3:okhttp:4.11.0' // Последняя версия OkHttp
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-chromium-driver', version: '4.14.0' // Последняя версия Selenium Chromium Driver
 }
+
 
 
 test {

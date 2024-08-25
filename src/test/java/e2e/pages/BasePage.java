@@ -1,4 +1,4 @@
-package E2E;
+package e2e.pages;
 
 
 

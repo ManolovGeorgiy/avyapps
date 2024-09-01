@@ -1,6 +1,5 @@
 package e2e.tests;
 
-import e2e.enums.LandingNavBar;
 import e2e.pages.Header;
 import e2e.pages.HomePage;
 import e2e.pages.LoginPage;
@@ -14,6 +13,7 @@ public class LoginTest extends TestBase {
     public void loginClickButton(){
         String email = "tatar@abv.bg";
         String password = "tatar";
+        homePage = new HomePage(app.driver);
 
         header = new Header(app.driver);
         header.clickLoginButton();

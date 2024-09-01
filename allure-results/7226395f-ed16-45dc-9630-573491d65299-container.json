@@ -1,0 +1,1 @@
+{"uuid":"7226395f-ed16-45dc-9630-573491d65299","name":"e2e.tests.TestBase.setApp","children":["3132d37c-5992-43d1-b2e9-5d1d52279bcc"],"description":"","befores":[{"name":"setApp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1725186821317,"stop":1725186840562}],"afters":[],"start":1725186821315,"stop":1725186840564}

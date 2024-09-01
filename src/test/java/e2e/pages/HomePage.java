@@ -6,8 +6,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class HomePage extends BasePage {
+import lombok.Getter;
 
+public class HomePage extends BasePage {
 
 
     @FindBy(xpath = "//*[@class='LandingNavBar_navWrapper__3FrCD']")
@@ -25,7 +26,6 @@ public class HomePage extends BasePage {
         } catch (StaleElementReferenceException e) {
         }
     }
-
     public  void clickButton(){
         loginButton.click();
     }

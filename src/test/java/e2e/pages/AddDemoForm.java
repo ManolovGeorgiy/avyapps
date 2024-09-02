@@ -48,6 +48,8 @@ public class AddDemoForm extends BasePage{
         nameCompanyInput.sendKeys(company);
         emailInput.sendKeys(email);
         phoneInput.sendKeys(phone);
+        //countryInput.click();
+        //countryInput.sendKeys(country);
         messageInput.sendKeys(message);
     }
     public void clickDemoButton(){

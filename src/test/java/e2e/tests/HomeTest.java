@@ -38,7 +38,7 @@ public class HomeTest extends TestBase{
         footer.clickFooterButton(FooterLinks.DEMO);
         homePage = new HomePage(app.driver);
         addDemoForm = new AddDemoForm(app.driver);
-        addDemoForm.setPostForm(name,nameCompany,email,phone,country,message);
+        addDemoForm.setPostForm(name,nameCompany,email,country,phone,message);
         addDemoForm.clickDemoButton();
         homePage.scrollDown();
         homePage.clickJoinButton();

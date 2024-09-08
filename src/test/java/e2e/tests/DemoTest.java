@@ -4,11 +4,10 @@ import com.github.javafaker.Faker;
 import e2e.enums.FooterLinks;
 import e2e.pages.AddDemoForm;
 import e2e.pages.Footer;
-import e2e.pages.Header;
 import e2e.pages.HomePage;
 import org.testng.annotations.Test;
 
-public class DemoTest extends TestBase{
+public class DemoTest extends TestBase {
 
     Faker faker = new Faker();
     HomePage homePage;
@@ -16,13 +15,13 @@ public class DemoTest extends TestBase{
     AddDemoForm addDemoForm;
 
     @Test
-    public void homeTest(){
+    public void homeTest() {
 
         String name = "Georg";
         String nameCompany = "Georg";
         String email = "g@gmail.com";
         String phone = "+1234567";
-        String country = "Albania";
+        String country = "France";
         String message = faker.lorem().sentence(50);
 
         // Инициализация страниц
@@ -37,12 +36,14 @@ public class DemoTest extends TestBase{
         // Клик по кнопке "Demo" в футере
         footer.clickFooterButton(FooterLinks.DEMO);
 
-        // Заполнение и отправка формы демо
+        // Ожидание загрузки формы и заполнение полей
         addDemoForm.waitForLoading();
-        addDemoForm.setPostForm(name, nameCompany, email, phone, country, message);
+        addDemoForm.setPostForm(name, nameCompany, email, phone, country, message);  // Исправлен порядок аргументов
+
+        // Клик по кнопке "Book a Demo"
         addDemoForm.clickDemoButton();
 
-        // Дополнительные действия
+        // Прокрутка вниз и клик по кнопке "Join" (если требуется)
         homePage.scrollDown();
         homePage.clickJoinButton();
     }

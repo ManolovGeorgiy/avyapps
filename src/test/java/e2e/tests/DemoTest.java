@@ -5,7 +5,7 @@ import e2e.enums.FooterLinks;
 import e2e.pages.AddDemoForm;
 import e2e.pages.Footer;
 import e2e.pages.HomePage;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 public class DemoTest extends TestBase {
 

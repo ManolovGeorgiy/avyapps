@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class HomePage extends BasePage {
 
-    @FindBy(xpath = "//*[@class='LandingJoin_joinButton__GNwZp']")
+    @FindBy(xpath = "//*[@class=LandingForm_formButton__dvhs7']")
     WebElement joinButton;
 
     @FindBy(xpath = "//*[@class='LandingNavBar_landingButtonV1__p1Wiy']")

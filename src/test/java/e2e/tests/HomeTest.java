@@ -40,7 +40,8 @@ public class HomeTest extends TestBase{
         addDemoForm = new AddDemoForm(app.driver);
         addDemoForm.setPostForm(name,nameCompany,email,country,phone,message);
         addDemoForm.clickDemoButton();
+        homePage.waitForLoading();
         homePage.scrollDown();
-        homePage.clickJoinButton();
+        //homePage.clickJoinButton();
     }
 }

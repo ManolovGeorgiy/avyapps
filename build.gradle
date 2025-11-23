@@ -1,6 +1,6 @@
 plugins {
     id 'java'
-    id "io.qameta.allure" version "2.9.6"
+    id "io.qameta.allure" version "3.0.1"               // обновил плагин до 3.0.1 :contentReference[oaicite:0]{index=0}
     id "org.gradle.test-retry" version "1.5.3"
 }
 
@@ -13,26 +13,32 @@ repositories {
 
 allure {
     autoconfigure = true
+    // можно указать конкретную версию Allure Commandline, если нужно:
+    // version = '2.30.0'
 }
 
 dependencies {
-    implementation 'io.qameta.allure:allure-testng:2.23.0'
-    implementation 'io.qameta.allure:allure-java-commons:2.23.0'
-    implementation 'io.qameta.allure:allure-java-annotations:2.23.0'
+    // Allure адаптеры
+    implementation 'io.qameta.allure:allure-testng:2.31.0'          // обновил до 2.31.0 (новее 2.23.0) :contentReference[oaicite:1]{index=1}
+    implementation 'io.qameta.allure:allure-java-commons:2.31.0'
+    implementation 'io.qameta.allure:allure-java-annotations:2.31.0'
 
-    implementation 'org.testng:testng:7.9.0'
-    testImplementation 'junit:junit:4.13.2'
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
-    runtimeOnly 'org.aspectj:aspectjweaver:1.9.20'
+    // Тестовые фреймворки
+    implementation 'org.testng:testng:7.9.0'                       // оставил, если нет новее, проверку лучше сделать
+    testImplementation 'junit:junit:4.13.2'                        // JUnit4
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'   // JUnit5 — оставил, если актуально
 
-    implementation 'io.rest-assured:rest-assured:5.4.0'
-    implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
-    implementation 'org.seleniumhq.selenium:selenium-java:4.14.0'
-    implementation 'io.github.bonigarcia:webdrivermanager:5.8.0'
-    implementation 'org.projectlombok:lombok:1.18.30'
-    implementation 'com.github.javafaker:javafaker:1.0.2'
-    implementation 'com.squareup.okhttp3:okhttp:4.11.0'
-    implementation 'org.seleniumhq.selenium:selenium-chromium-driver:4.14.0'
+    runtimeOnly 'org.aspectj:aspectjweaver:1.9.20'                // оставил, если не нужно обновлять
+
+    // Автоматизация
+    implementation 'io.rest-assured:rest-assured:5.5.6'            // обновил до 5.5.6 :contentReference[oaicite:2]{index=2}
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2' // оставил
+    implementation 'org.seleniumhq.selenium:selenium-java:4.14.0'  // оставил 4.14.0 :contentReference[oaicite:3]{index=3}
+    implementation 'io.github.bonigarcia:webdrivermanager:5.8.0'   // оставил
+    implementation 'org.projectlombok:lombok:1.18.30'              // оставил
+    implementation 'com.github.javafaker:javafaker:1.0.2'          // оставил
+    implementation 'com.squareup.okhttp3:okhttp:4.11.0'            // оставил
+    implementation 'org.seleniumhq.selenium:selenium-chromium-driver:4.14.0' // оставил
 }
 
 test {

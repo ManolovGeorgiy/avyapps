@@ -42,6 +42,6 @@ public class HomeTest extends TestBase{
         addDemoForm.clickDemoButton();
         homePage.waitForLoading();
         homePage.scrollDown();
-        //homePage.clickJoinButton();
+        homePage.clickJoinButton();
     }
 }
